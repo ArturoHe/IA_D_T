@@ -35,7 +35,7 @@ loss_fn = nn.CrossEntropyLoss()
 optimizer = optim.Adam(model.parameters(), lr=1e-3)
 
 # 3. Entrenamiento
-for epoch in range(20):
+for epoch in range(20):###Bajamos epocas a 20 para poder hacerlo con cpu tambien
     model.train()
     optimizer.zero_grad()
     logits = model(X_train)
