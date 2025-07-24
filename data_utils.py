@@ -34,7 +34,7 @@ def load_stock_data(symbol="GOOGL", start="2018-01-01", end="2025-07-21"):
 
     return data
 
-def prepare_sequences(data, seq_len=20, rtg_horizon=5):
+def prepare_sequences(data, seq_len=20, rtg_horizon=3):
     features = ["return", "return_1d_ago", "return_2d_ago", "return_3d_ago"]
     scaler = MinMaxScaler()
     data[features] = scaler.fit_transform(data[features])

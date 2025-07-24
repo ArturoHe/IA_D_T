@@ -16,7 +16,7 @@ print(f"Usando dispositivo: {device}")
 data = load_stock_data("GOOGL")
 X, A, R, RTG = prepare_sequences(data)
 
-X_train, X_test, A_train, A_test = train_test_split(X, A, test_size=0.4, shuffle=False)
+X_train, X_test, A_train, A_test = train_test_split(X, A, test_size=0.2, shuffle=False)
 
 X_train = torch.tensor(X_train, dtype=torch.float32)
 X_test = torch.tensor(X_test, dtype=torch.float32)
